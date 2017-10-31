@@ -1,5 +1,5 @@
-require_relative './song_data.rb'
 require_relative './artist_data.rb'
+require_relative './song_data.rb'
 
 Song.destroy_all
 Artist.destroy_all
@@ -20,7 +20,7 @@ song_data.each_pair do |artist_name, songs|
       title:        song[:title],
       album:        song[:album],
       preview_url:  song[:preview_link],
-      artist:       current_artist
+      artist:    current_artist
     })
   end
 end
