@@ -20,7 +20,7 @@ class Artist extends Component {
         }
         try {
             const { artist_id } = this.props.match.params
-            const response = await axios.get(`/api/artists/${artist_id}/songs`)
+            const response = await axios.get(`/api/artist/${artist_id}/songs`)
             this.setState({songs: response.data})
         }catch(error) {
             console.log(error)
